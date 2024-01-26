@@ -1,0 +1,15 @@
+@import "./../../../../assets/styles/variables.scss";
+.details-container {
+  app-button {
+    margin-bottom: 1rem;
+    width: fit-content;
+    display: block;
+  }
+}
+@media (max-width: 500px) {
+  .details-container {
+    app-button {
+      width: fit-content;
+    }
+  }
+}

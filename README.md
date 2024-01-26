@@ -1,10 +1,14 @@
 # UserDashboardApp
 
+This Project is Simple Users Dashboard App
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.2.
+Feature used to build and structure the project  ( Services / NgRx / Custom Directives / API Response Caching / HttpInterceptor / Modules / Module Lazy loading )
 
 ## Development server
 
+Run `npm install --legacy-peer-deps` to install all needed dependencies
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve -o` to open the project directly on your Browser
 
 ## Code scaffolding
 

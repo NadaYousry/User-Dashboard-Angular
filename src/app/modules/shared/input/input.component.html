@@ -1,0 +1,10 @@
+<div class="input-container flex-center">
+  <label class="label ">{{ label }}</label>
+  <input
+    id="input"
+    type="text"
+    [(ngModel)]="searchKeyWord"
+    (ngModelChange)="handleChange($event)"
+    class="input"
+  />
+</div>

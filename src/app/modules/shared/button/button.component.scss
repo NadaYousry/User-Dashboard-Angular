@@ -1,0 +1,52 @@
+@import "./../../../../assets/styles/variables.scss";
+
+.button {
+  border: none;
+  padding: 0.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  width: 100%;
+  &:not(.border-10) {
+    border-radius: 20px;
+  }
+}
+.border-10 {
+  border-radius: 10px;
+}
+.button-primary {
+  background-color: $primary-color;
+  transition: all 0.25s ease-in-out;
+  color: $white;
+  &:hover {
+    background-color: $primary-color-hover;
+  }
+}
+
+.button-secondary {
+  background-color: $secondary-color;
+  transition: all 0.25s ease-in-out;
+  color: $white;
+  &:hover {
+    background-color: $secondary-color-hover;
+  }
+}
+
+.button-gray {
+  background-color: $gray;
+  transition: all 0.25s ease-in-out;
+  color: $white;
+  &:hover {
+    background-color: $gray-hover;
+  }
+}
+
+.button-orange {
+  background-color: $orange;
+  transition: all 0.25s ease-in-out;
+  color: $white;
+  &:hover {
+    background-color: $orange-hover;
+  }
+}

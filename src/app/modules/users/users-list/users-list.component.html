@@ -1,0 +1,70 @@
+<section class="filters-container container flex-between">
+  <app-input
+    (search)="changeSearchHandler($event)"
+    [label]="'Search by User Id:'"
+  ></app-input>
+  <div class="view-buttons-container flex-center">
+    <app-button
+      (handleClick)="handleButtonClick($event)"
+      [value]="'grid'"
+      [buttonText]="''"
+      [className]="'view-button border-10 '"
+      [theme]="view === 'grid' ? 'button-secondary' : 'button-gray'"
+      ><img
+        width="20"
+        height="20"
+        src="./../../../../assets/images/icons/grid.png"
+    /></app-button>
+
+    <app-button
+      (handleClick)="handleButtonClick($event)"
+      [value]="'list'"
+      [buttonText]="''"
+      [className]="'view-button border-10 '"
+      [theme]="view === 'list' ? 'button-secondary' : 'button-gray'"
+      ><img
+        width="20"
+        height="20"
+        src="./../../../../assets/images/icons/view-list.png"
+    /></app-button>
+  </div>
+</section>
+<ng-container
+  *ngIf="
+    usersList && usersList.length > 0;
+    then usersListContainer;
+    else noResult
+  "
+>
+</ng-container>
+<ng-template #usersListContainer>
+  <section
+    class="list-container container"
+    [ngClass]="view === 'grid' ? 'grid' : 'list'"
+  >
+    <app-card
+      *ngFor="let user of usersList; let i = index"
+      [linkUrl]="['/users', user.id]"
+      [image]="user.avatar"
+      [title]="user.first_name + ' ' + user.last_name"
+      [badge]="user.id"
+      [description]="user.email"
+      [direction]="view === 'grid' ? 'vertical' : 'horizontal'"
+      [buttonText]="'View Profile'"
+    ></app-card>
+  </section>
+  <section class="pagination-container container flex-center">
+    <button
+      *ngFor="let button of buttons; let i = index"
+      (click)="handlePaginationChange(i + 1)"
+      [ngClass]="i + 1 === paginationData.page ? 'active' : ''"
+      class="pagination-button flex-center"
+    >
+      {{ i + 1 }}
+    </button>
+  </section>
+</ng-template>
+
+<ng-template #noResult>
+  <p *ngIf="!isLoading" class="no-result flex-center">no result</p>
+</ng-template>

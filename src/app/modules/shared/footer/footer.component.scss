@@ -1,0 +1,10 @@
+@import './../../../../assets/styles/variables.scss';
+
+footer{
+    background-color: $bale-white;
+    padding: 2rem;
+    p{
+        font-family: $bold-font;
+        color: $text-color;
+    }
+}

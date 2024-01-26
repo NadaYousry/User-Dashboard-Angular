@@ -1,0 +1,21 @@
+
+<a  [routerLink]="linkUrl" [class]="direction + ' card'" [appHover]="hoverEffect">
+  <div class="card-img flex-center">
+    <img [src]="image" alt="card image" />
+  </div>
+  <div class="card-content flex-center flex-column">
+    <div class="flex-center flex-column details">
+      <h3 class="name flex-center">
+        {{ title }}
+        <span *ngIf="badge" class="id flex-center"> {{ badge }}</span>
+      </h3>
+
+      <p class="email">{{ description }}</p>
+    </div>
+    <app-button
+      *ngIf="buttonText"
+      [buttonText]="buttonText"
+      [className]="'card-button '"
+    ></app-button>
+  </div>
+</a>

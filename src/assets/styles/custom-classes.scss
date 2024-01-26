@@ -1,0 +1,45 @@
+@import "./variables.scss";
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-column{
+  flex-direction: column;
+}
+.primary-link {
+  color: $primary-color;
+}
+.white-link {
+  color: white;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: $orange;
+    transition: all 0.25s ease-in-out;
+  }
+  &:hover {
+    color: $orange;
+    &::after {
+      width: 100%;
+    }
+  }
+}

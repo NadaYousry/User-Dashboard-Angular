@@ -1,0 +1,13 @@
+@import "./../../../../assets/styles/variables.scss";
+
+.input-container {
+  .input {
+    padding: 10px;
+    border: 1px solid $light-gray;
+    border-radius: 10px;
+    margin: 0 10px;
+    &:focus {
+      outline: none;
+    }
+  }
+}

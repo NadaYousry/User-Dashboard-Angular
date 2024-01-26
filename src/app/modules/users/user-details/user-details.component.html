@@ -1,0 +1,16 @@
+<section class="container details-container">
+  <app-button
+    (handleClick)="handleBackClick($event)"
+    [buttonText]="'&lt; Back'"
+    [className]="'border-10 '"
+    [theme]="'button-gray'"
+  ></app-button>
+  <app-card
+    [hoverEffect]="false"
+    [image]="userData.avatar"
+    [title]="userData.first_name + ' ' + userData.last_name"
+    [badge]="userData.id"
+    [description]="userData.email"
+    [direction]="'horizontal'"
+  ></app-card>
+</section>

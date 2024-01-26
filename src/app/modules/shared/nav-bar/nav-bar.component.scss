@@ -1,0 +1,24 @@
+@import "./../../../../assets/styles/variables.scss";
+
+.nav-container {
+  background-color: $primary-color;
+  box-shadow: 0 5px 5px #cdcdcd;
+  padding: 1rem;
+  position: sticky;
+  .logo-container {
+    display: block;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .nav-link:not(.logo-container) {
+    margin-left: 1rem;
+    text-transform: capitalize;
+    padding: 1rem;
+    font-family: $regular-font;
+  }
+}
